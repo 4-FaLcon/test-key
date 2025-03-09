@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle with JavaScript</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000;"></canvas>
+
+    <script>
+        // Access the canvas element
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set properties for the circle
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const radius = 100;
+
+        // Draw the circle
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = 'green'; // Fill color
+        ctx.fill(); // Fill the circle
+        ctx.strokeStyle = 'black'; // Border color
+        ctx.lineWidth = 5; // Border width
+        ctx.stroke(); // Draw the border
+    </script>
+</body>
+</html>
